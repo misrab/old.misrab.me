@@ -1,13 +1,16 @@
 .btn-group(style='padding: 0 5px; width: 100%;', data-toggle='buttons')
-	label.btn.btn-warning.active(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='0')
+	label.btn.btn-warning.active(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='0')
 		input(type='radio', name='options', id='option2')
 		| Welcome
-	label.btn.btn-danger(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='1')
+	label.btn.btn-danger(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='1')
 		input(type='radio', name='options', id='option3')
 		| Projects
-	label.btn.btn-primary(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='2')
+	label.btn.btn-primary(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='2')
 		input(type='radio', name='options', id='option4')
 		| Résumé
+	label.btn.btn-success(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='3')
+		input(type='radio', name='options', id='option4')
+		| Fun
 
 #carousel.carousel.slide.text-center
 	.carousel-inner(style='padding: 0 5px;')
@@ -16,8 +19,10 @@
 				| Welcome to my personal piece of the Web. Do check out the
 				a(href='#', data-target='#carousel', data-slide-to='1')  projects
 				|  that
-				|  I've worked on, or learn a bit about me from my
+				|  I've worked on, learn a bit about me from my
 				a(href='#', data-target='#carousel', data-slide-to='2')  résumé
+				| , or see how silly I can be having
+				a(href='#', data-target='#carousel', data-slide-to='3')  fun
 				| .
 			p.big_space_top
 				| In the meantime, if you leave with nothing else from this page, here's
@@ -80,3 +85,26 @@
 				
 			.big_space_top(style='font-weight: bold;')
 				a(href='/statics/resume.pdf', target='_blank') Click here for my general-purpose CV
+				
+				
+		//- Fun
+		.item(data-id='3')
+			p
+				| These are some songs I recorded with a good friend, TF Pauly, just for fun. I do not
+				|  pretend to be good, but I quite like playing the guitar and piano!
+			p I should note that if we were Pinky and the Brain, I would be Pinky, and he the Brain. Hope you enjoy!
+		
+			//- Took a trip
+			iframe(width="100%", height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130760510&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true")			
+
+			//- Got a B
+			iframe(width="100%", height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130760509&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true")
+
+			//- 2 + 2 = U
+			iframe(width="100%", height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130760506&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true")
+
+			//- Singularity
+			iframe(width="100%", height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130760514&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true")			
+
+			//- In the Morning
+			iframe(width="100%", height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/130760518&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true")
