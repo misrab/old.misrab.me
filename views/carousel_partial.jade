@@ -1,0 +1,37 @@
+.btn-group(style='padding: 0 5px; width: 100%;', data-toggle='buttons')
+	label.active.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='0')
+		input(type='radio', name='options', id='option1')
+		| Option1
+	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='1')
+		input(type='radio', name='options', id='option2')
+		| Option2
+	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='2')
+		input(type='radio', name='options', id='option3')
+		| Option3
+	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='3')
+		input(type='radio', name='options', id='option4')
+		| Résumé
+
+#carousel.carousel.slide.text-center
+	.carousel-inner(style='padding: 0 5px;')
+		.item.active(data-id='0')
+			| lala
+		.item(data-id='1')
+			| fafa
+		.item(data-id='2')
+			| booobooo
+		.item(data-id='3')
+			- var birthday = +new Date("1988-08-20 00:00:1")
+			- var age = ~~((Date.now() - birthday) / (31557600000))
+			p
+				| Hi there, I'm Misrab, a #{age} year-old graduate of Stanford University.	
+			p
+				| I'm interested in technology and its applications to human welfare.
+				|  I explore areas ranging from machine learning and the web to
+				|   economics and linguistics.	
+			p
+				| Please feel free to check out my attached CV, or get in touch with me
+				|  at faizullah.misrab@gmail.com.
+				
+			.big_space_top(style='font-weight: bold;')
+				a(href='') Click here for my general-purpose CV

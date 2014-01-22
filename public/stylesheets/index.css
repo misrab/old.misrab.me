@@ -1,0 +1,19 @@
+#profile_img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #f5f5f5;
+}
+.btn-group {
+  color: #000;
+  text-shadow: none;
+}
+.carousel .item {
+  background-color: #fff;
+  min-height: 400px;
+  color: #000;
+  text-shadow: none;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 0px #000;
+}

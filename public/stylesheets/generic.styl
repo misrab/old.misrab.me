@@ -1,0 +1,97 @@
+@import "nib"
+@import "./variables"
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Lato')
+
+
+html, body
+	height 100%
+body
+	font-family 'Lato'
+	background-image url('/images/background.jpg')
+	background-size cover
+	color white
+	text-shadow 0 0 4px black
+	
+	/*
+	background-color signature_color
+	background radial-gradient(top, white, signature_color)
+	background-repeat no-repeat
+	background-attachment fixed*/
+.container
+	padding-top 20px  /* for navbar or just space */
+	height 100%
+	position relative
+	overflow auto
+	padding-bottom 65px
+#wrap
+	min-height 100%
+	height auto !important
+	height 100%
+	margin 0 auto -70px
+#footer
+	height 35px
+	margin-top 35px
+
+	
+	
+.clickable
+	cursor pointer
+
+.inline
+	display inline
+.inline_block
+	display inline-block
+.block
+	display block
+.my_hide
+	display none
+	
+.relative
+	position relative
+.absolute
+	position absolute
+
+.font1
+	font-size 1em
+.font1-25
+	font-size 1.25em
+.font1-5
+	font-size 1.5em
+.font1-75
+	font-size 1.75em
+.font2
+	font-size 2em
+
+.inline_circle
+	text-align center
+	padding 0.5em 0
+	font-size 1em
+	height 32px
+	width 32px
+	background-color black
+	color white
+	border-radius 32px
+	
+.top
+	vertical-align top
+.bottom
+	vertical-align bottom
+	
+.small_space_top
+	margin-top 5px
+.medium_space_top
+	margin-top 15px
+.big_space_top
+	margin-top 30px
+	
+.full_width
+	width 100%
+.half_width
+	width 50%
+.left_right_margin
+	margin-left 10px
+	margin-right 10px
