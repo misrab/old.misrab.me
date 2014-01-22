@@ -1,30 +1,75 @@
 .btn-group(style='padding: 0 5px; width: 100%;', data-toggle='buttons')
-	label.active.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='0')
-		input(type='radio', name='options', id='option1')
-		| Option1
-	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='1')
+	label.btn.btn-warning.active(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='0')
 		input(type='radio', name='options', id='option2')
-		| Option2
-	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='2')
+		| Welcome
+	label.btn.btn-danger(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='1')
 		input(type='radio', name='options', id='option3')
-		| Option3
-	label.btn.btn-default(style='width: 25%;', type='button', data-target='#carousel', data-slide-to='3')
+		| Projects
+	label.btn.btn-primary(style='width: 33.3%;', type='button', data-target='#carousel', data-slide-to='2')
 		input(type='radio', name='options', id='option4')
 		| Résumé
 
 #carousel.carousel.slide.text-center
 	.carousel-inner(style='padding: 0 5px;')
 		.item.active(data-id='0')
-			| lala
+			p 
+				| Welcome to my personal piece of the Web. Do check out the
+				a(href='#', data-target='#carousel', data-slide-to='1')  projects
+				|  that
+				|  I've worked on, or learn a bit about me from my
+				a(href='#', data-target='#carousel', data-slide-to='2')  résumé
+				| .
+			p.big_space_top
+				| In the meantime, if you leave with nothing else from this page, here's
+				|  a nice string of words:
+				
+			p.big_space_top(style='font-weight: bold; font-style:italic;')
+				| "My father once told me, 'Son, you can play for applause,
+				|  but then that's all you'll get'."
+				br
+				br
+				|  - A philosopher of Jazz
+			
+		//- Projects
 		.item(data-id='1')
-			| fafa
+			p
+				| These are some of the projects I've worked on in the past.
+				|  They vary quite a bit in subject matter, complexity and scale,
+				|  but each was terrific fun!
+				
+			.slide_section.big_space_top
+				h4
+					a(href='http://afternoon-garden-4776.herokuapp.com', target='_blank') NeuroSplash
+				p
+					| This was an online educational platform I built with three friends. It allowed users to
+					|  create little multimedia slideshows called "neurons" that would naturally connect to each other!
+			.slide_section
+				h4
+					a(href='/statics/cs229.pdf', target='_blank') Machine Learning	
+				p
+					| I and three classmates built systems to recognize spoken language, including
+					|  a Support Vector Machine, Mixtures of Gaussians and an Artificial Neural Network.
+					|  We were able to distinguish languages with pretty high accuracy!
+			.slide_section
+				h4 
+					a(href='/statics/ms233.pdf', target='_blank') Auction Design
+				p
+					| Automated, extremely high-frequency auctions are prevalent on the web today. Here I
+					|  analyze exchanges in online advertising, and the incentives that affect bidding mechanisms.
+			.slide_section(style='border-bottom:none;')
+				h4 
+					a(href='/statics/bio109A.pdf', target='_blank') Biology
+				p
+					| I am by no means an expert in Biology, but that doesn't mean I don't find it
+					|  fascinating! In this simple paper I explore the basics of stem cells.
+			
+		//- Resume
 		.item(data-id='2')
-			| booobooo
-		.item(data-id='3')
 			- var birthday = +new Date("1988-08-20 00:00:1")
 			- var age = ~~((Date.now() - birthday) / (31557600000))
 			p
-				| Hi there, I'm Misrab, a #{age} year-old graduate of Stanford University.	
+				| I'm Misrab, a #{age} year-old graduate of Stanford University. I grew up in Singapore
+				|  and now live in California.
 			p
 				| I'm interested in technology and its applications to human welfare.
 				|  I explore areas ranging from machine learning and the web to
@@ -34,4 +79,4 @@
 				|  at faizullah.misrab@gmail.com.
 				
 			.big_space_top(style='font-weight: bold;')
-				a(href='') Click here for my general-purpose CV
+				a(href='/statics/resume.pdf', target='_blank') Click here for my general-purpose CV

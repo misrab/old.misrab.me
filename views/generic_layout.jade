@@ -10,6 +10,8 @@ html
 			script(src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js")
 		// [endif]
 		
+		//- Force favicon download
+		link(rel="shortcut icon", href="/images/favicon.ico")
 		
 		link(rel='stylesheet', href='/stylesheets/generic.css')
 		block stylesheets
@@ -18,8 +20,6 @@ html
 		.container
 			#wrap
 				block content
-		
-		
 		
 			include ./footer_partial
 		
