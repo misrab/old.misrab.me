@@ -24,7 +24,8 @@ app.use(stylus.middleware(
   }
 ));
 app.use(express.static(__dirname + '/public'));
-app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
+// don't forget the .ico link in general_layout
+app.use(express.favicon(__dirname + '/public/images/Misrab.ico'));
 
 // Passport and Sessions
 app.use(express.cookieParser());
