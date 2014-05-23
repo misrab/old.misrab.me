@@ -1,6 +1,9 @@
 /*
  * Module dependencies
  */
+// newrelic to ping app
+require('newrelic');
+
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib');
@@ -49,7 +52,11 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-var port = process.env.PORT || 5555;
+
+// !! Change this back!!	
+//var port = process.env.PORT || 5555;
+var port = 5555;
+
 
 app.listen(port, function() {
 	console.log('### Environment is: ' + process.env.NODE_ENV);
