@@ -53,8 +53,7 @@ app.get('/', function(req, res) {
 
 
 // !! Change this back!!	
-//var port = process.env.PORT || 5555;
-var port = 5555;
+var port = process.env.PORT || 5555;
 
 
 app.listen(port, function() {
