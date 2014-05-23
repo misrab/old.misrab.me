@@ -1,8 +1,7 @@
 /*
  * Module dependencies
  */
-// newrelic to ping app
-require('newrelic');
+
 
 var express = require('express')
   , stylus = require('stylus')
