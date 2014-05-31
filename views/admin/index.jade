@@ -1,0 +1,47 @@
+extends ../shared/generic_layout
+
+block stylesheets
+	//- link(rel='stylesheet', href='/stylesheets/index.css')
+	
+block javascripts
+	script(type='text/javascript', src='/javascripts/admin.js')
+	
+block content
+	h1 Admin Page
+
+	a(href='/admin/logout') Logout
+
+
+	h2 Add Project
+
+	form(action="/admin/project", method="POST", enctype="multipart/form-data")
+		input(type='submit').btn.btn-success
+		input.form-control(required, type='text', name='title', placeholder='Title')
+		input.form-control(type='text', name='link', placeholder='External url (if any)')
+		input.form-control(name='file', type='file')
+		//- input(required, name="password", type='password', placeholder='Password').form-control
+		textarea.form-control(required, name='description', placeholder='Description')
+
+	h2 Add Blogpost
+
+	form(action="/admin/blogpost", method="POST")
+		input(type='submit').btn.btn-success
+		input.form-control(required, type='text', name='title', placeholder='Title')
+		textarea.form-control(required, name='description', placeholder='Description')
+		//- input(required, name="password", type='password', placeholder='Password').form-control
+		textarea.form-control(required, placeholder='Text', style='height: 1000px; overflow: scroll; font-size: 1.25em;')
+
+
+	h2 Existing Projects
+	each project in projects
+		div
+			h4= project.title
+			p= project.description
+			button(data-target='/admin/project/#{project.id}').btn.btn-danger.delete_project Remove
+
+	h2 Existing Blogposts
+	each blog in blogposts
+		div
+			h4= blog.title
+			p= blog.description
+			button(data-target='/admin/blogpost/#{blog.id}').btn.btn-danger.delete_blogpost Remove

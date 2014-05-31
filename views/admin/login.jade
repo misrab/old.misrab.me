@@ -1,0 +1,15 @@
+extends ../shared/generic_layout
+
+block stylesheets
+	//- link(rel='stylesheet', href='/stylesheets/index.css')
+	
+block javascripts
+	//- script(type='text/javascript', src='/javascripts/index.js')
+	
+block content
+	h1 Admin Login
+
+	form(action="/admin/session", method="POST")
+		input(required, name="email", type='text', placeholder='Email').form-control
+		input(required, name="password", type='password', placeholder='Password').form-control
+		input(required, type='submit').form-control

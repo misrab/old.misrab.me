@@ -1,9 +1,48 @@
+@import "nib"
+@import "./variables"
+
+
 #profile_img
 	width 100%
-	border-radius 6px
-	box-shadow 0 0 5px whitesmoke
-	
-	
+	box-shadow 0 0 5px grey
+
+#nav_table
+	width 100%
+	font-size 1.5em
+	text-align center
+
+	.nav_item
+		cursor pointer
+		color grey
+	.nav_item:hover, .nav_item.active
+		color black
+
+	.nav_projects
+		color projects_color
+	.nav_blog
+		color blog_color
+	.nav_fun
+		color fun_color
+
+
+#welcome, #projects, #blog, #fun
+	padding 20px
+	margin 0 5px
+	margin-bottom 30px
+	overflow-y scroll
+	box-shadow 0 0 10px grey
+#welcome
+	background-color welcome_color
+#projects
+	background-color projects_color
+#blog
+	background-color blog_color
+#fun
+	background-color fun_color
+
+
+
+/*
 .btn-group
 	color black
 	text-shadow none
@@ -29,3 +68,4 @@
 			p
 				text-align left
 				font-size 0.75em
+*/

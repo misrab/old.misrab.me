@@ -7,15 +7,13 @@ body {
   height: 100%;
 }
 body {
-  height: auto;
-/* subjective choice */
   font-family: 'Lato';
-  background-image: url("/images/background.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  color: #fff;
-  text-shadow: 0 0 4px #000;
+  background-color: #e7feff;
+/*
+	background-image url('/images/background.jpg')
+	background-size cover
+	color white
+	text-shadow 0 0 4px black*/
 /*
 	background-color signature_color
 	background radial-gradient(top, white, signature_color)
@@ -25,7 +23,6 @@ body {
 .container {
   padding-top: 20px;
 /* for navbar or just space */
-  height: 100%;
   position: relative;
   overflow: auto;
   padding-bottom: 65px;
@@ -38,7 +35,21 @@ body {
 }
 #footer {
   height: 35px;
-  margin-top: 35px;
+  margin-top: 120px;
+}
+a:hover {
+  text-decoration: none;
+}
+input,
+textarea {
+  margin-top: 5px;
+}
+.white_box {
+  background-color: #fff;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 15px auto;
 }
 .clickable {
   cursor: pointer;
@@ -86,6 +97,12 @@ body {
   color: #fff;
   -webkit-border-radius: 32px;
   border-radius: 32px;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
 }
 .top {
   vertical-align: top;

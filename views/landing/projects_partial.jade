@@ -1,0 +1,16 @@
+.row#projects.full_height.relative
+	.col-sm-12
+		a(href='#').pull-right.back_to_top
+			| Back to top
+			span.glyphicon.glyphicon-chevron-up.left_right_margin
+		h3 Projects
+
+		.text-center
+			each project in projects
+				.white_box
+					h4.inline_block.left_right_margin= project.title
+					if project.link
+						a(href=project.link, target="_blank").left_right_margin.inline_block link
+					if project.static_url
+						a(href=project.static_url, target="_blank").left_right_margin.inline_block file
+					p= project.description

@@ -1,0 +1,15 @@
+extends ../shared/generic_layout
+
+block stylesheets
+	link(rel='stylesheet', href='/stylesheets/index.css')
+	
+block javascripts
+	
+block content
+	include ./welcome_partial
+
+	include ./projects_partial
+
+	include ./blog_partial
+
+	include ./fun_partial
