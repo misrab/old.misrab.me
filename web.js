@@ -179,6 +179,19 @@ app.get('/', function(req, res) {
     res.render('landing/index', locals);
   });
 });
+app.get('/blog/:id', function(req, res) {
+  var id = parseInt(req.param('id'));
+  if (isNaN(parseInt(id))) return res.redirect('/');
+
+  db_pg.Blogpost.find(id).success(function(blog) {
+    res.render('landing/blog', { blog: blog });
+  }).error(function(err) {
+    return res.redirect('/');
+  });
+});
+app.get('/fun', function(req, res) {
+  res.render('landing/fun');
+});
 
 // admin pages
 app.get('/admin', verifyIsAdmin, function(req, res) {
@@ -225,6 +238,7 @@ app.post('/admin/session', function(req, res) {
 
 
 // temp signup routes
+/*
 app.get('/admin/signup', function(req, res) {
   res.render('admin/signup');
 });
@@ -243,7 +257,7 @@ app.post('/admin/signup', function(req, res) {
     });
   });
 });
-
+*/
 
 app.post('/admin/project', verifyIsAdmin, function(req, res) {
 

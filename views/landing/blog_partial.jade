@@ -4,3 +4,12 @@
 			| Back to top
 			span.glyphicon.glyphicon-chevron-up.left_right_margin
 		h3 Blog
+
+		.text-center
+			- var DATES = ["January", "February", "March", "April", "May", "June", "July", "August","September", "October", "November", "December"];
+			each blog in blogposts
+				.white_box
+					a(href='/blog/#{blog.id}')
+						h4= blog.title
+					div= blog.createdAt.getDate() + ' ' + DATES[blog.createdAt.getMonth()] + ' ' + blog.createdAt.getFullYear()
+					p.medium_space_top= blog.description

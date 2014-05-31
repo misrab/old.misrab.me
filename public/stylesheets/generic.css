@@ -9,6 +9,7 @@ body {
 body {
   font-family: 'Lato';
   background-color: #e7feff;
+  word-wrap: break-word;
 /*
 	background-image url('/images/background.jpg')
 	background-size cover
