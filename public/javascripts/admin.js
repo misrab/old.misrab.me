@@ -52,6 +52,8 @@ $(function() {
 			  success: function(data) {
 			  	// !! clear id
 			  	$('input[name="id"]', form).val('');
+			  	$('textarea[name="description"]', form).val('');
+			  	$('textarea[name="content"]', form).val('');
 			  }
 			});
 		// POST case
