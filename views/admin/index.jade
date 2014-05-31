@@ -24,8 +24,10 @@ block content
 
 	h2 Add Blogpost
 
-	form(action="/admin/blogpost", method="POST")
+	form(action="/admin/blogpost", method="POST", id='blogpost_form')
 		input(type='submit').btn.btn-success
+
+		input(type='hidden', name='id', value='')
 		input.form-control(required, type='text', name='title', placeholder='Title')
 		textarea.form-control(required, name='description', placeholder='Description')
 		//- input(required, name="password", type='password', placeholder='Password').form-control
@@ -45,3 +47,6 @@ block content
 			h4= blog.title
 			p= blog.description
 			button(data-target='/admin/blogpost/#{blog.id}').btn.btn-danger.delete_blogpost Remove
+			button(data-target='/admin/blogpost/#{blog.id}').btn.btn-default.edit_blogpost.left_right_margin Edit
+
+

@@ -325,6 +325,16 @@ app.delete('/admin/project/:id', verifyIsAdmin, function(req, res) {
   }); 
 });
 
+
+app.get('/admin/blogpost/:id', function(req, res) {
+  var id = parseInt(req.param('id'));
+  if (isNaN(parseInt(id))) return res.redirect('/');
+  db_pg.Blogpost.find(id).success(function(blog) {
+    res.json(200, blog);
+  }).error(function(err) {
+    res.json(400, err);
+  });
+});
 app.post('/admin/blogpost', verifyIsAdmin, function(req, res) {
   //if (!verifyPassword(req.body.password)) return res.redirect('/');
 
@@ -335,6 +345,24 @@ app.post('/admin/blogpost', verifyIsAdmin, function(req, res) {
   };
   db_pg.Blogpost.create(blog).success(function() {
     res.redirect('/admin');
+  }).error(function(err) {
+    return res.json(400, err);
+  });
+});
+app.put('/admin/blogpost/:id', verifyIsAdmin, function(req, res) {
+  var id = parseInt(req.param('id'));
+  if (isNaN(parseInt(id))) return res.redirect('/');
+
+  db_pg.Blogpost.find(id).success(function(blog) {
+    // update and save
+    blog.title = req.body.title;
+    blog.description = req.body.description;
+    blog.content = req.body.content;
+    blog.save().success(function() {
+      return res.send(200);
+    }).error(function(err) {
+      return res.json(400, err);
+    });
   }).error(function(err) {
     return res.json(400, err);
   });
