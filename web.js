@@ -160,7 +160,8 @@ function getProjectsAndBlogposts(next) {
     },
     function(cb) {
       // order by createdAt
-      db_pg.Blogpost.findAll({ order: 'createdAt DESC'}).success(function(blogs) {
+      //{
+      db_pg.Blogpost.findAll({ order: 'id DESC'}).success(function(blogs) {
         cb(null, blogs);
       }).error(cb);
     }
