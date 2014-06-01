@@ -159,7 +159,8 @@ function getProjectsAndBlogposts(next) {
       }).error(cb);
     },
     function(cb) {
-      db_pg.Blogpost.findAll().success(function(blogs) {
+      // order by createdAt
+      db_pg.Blogpost.findAll({ order: 'createdAt DESC'}).success(function(blogs) {
         cb(null, blogs);
       }).error(cb);
     }
